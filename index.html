@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <title>Html with pure javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td><!-- onsubmit="event.preventDefault(); use hoicy to block html forms ar default url parameters send bondho korty -->
+                <!-- onFormSubmit(); aita akta function ar name dici jaita form ar data submit hower por dhory  -->
+                <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+
+                    <div>
+                        <label>Full Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div>
+                        <label>EMP Code</label>
+                        <input type="text" name="empCode" id="empCode">
+                    </div>
+                    <div>
+                        <label>Salary</label>
+                        <input type="text" name="salary" id="salary">
+                    </div>
+                    <div>
+                        <label>City</label>
+                        <input type="text" name="city" id="city">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                  
+                </form>
+            </td>
+            <!-- second part -->
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                       <tr>
+                            <th>Full Name</th>
+                            <th>Employ Code</th>
+                            <th>Salary</th>
+                            <th>City</th>
+                            <th>Crud</th>
+                       </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </tbale>
+            </td>
+        </tr>
+    </table>
+ 
+    <script src="script.js"></script>
+</body>
+</html>
